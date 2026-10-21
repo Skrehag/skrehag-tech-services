@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { execFileSync } from 'node:child_process';
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const html = await fs.readFile(path.join(root, 'index.html'), 'utf8');
+const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(m => m[1]);
+assert.equal(new Set(ids).size, ids.length, 'Duplicate HTML ids');
+for (const [, id] of html.matchAll(/href="#([^"]+)"/g)) assert(ids.includes(id), `Broken section link: ${id}`);
+for (const [, file] of html.matchAll(/(?:src|href)="\.\/([^"]+)"/g)) await fs.access(path.join(root, file));
+assert(html.includes('lang="cs"'), 'Missing Czech document language');
+assert.equal([...html.matchAll(/<h1\b/g)].length, 1, 'Exactly one h1 is required');
+assert(!html.includes('href="#"'), 'Placeholder link found');
+assert(html.includes('name="viewport"'), 'Missing mobile viewport');
+assert(html.includes('name="robots" content="noindex, nofollow"'), 'Draft must not be indexed');
+for (const script of ['script.js', 'site-config.js', 'tools/build.mjs', 'tools/serve.mjs']) execFileSync(process.execPath, ['--check', path.join(root, script)], { stdio: 'inherit' });
+console.log(`OK: ${ids.length} unique anchors, local assets, draft metadata and JavaScript syntax.`);
