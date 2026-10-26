@@ -1,7 +1,7 @@
 // Veřejné údaje webu. Do tohoto souboru nikdy nevkládejte hesla ani přístupové klíče.
-// Ukázkové služby v index.html je třeba potvrdit nebo upravit před ostrým spuštěním.
+// Při změně e-mailu aktualizujte také odkazy a metadata v index.html.
 window.SITE_CONFIG = Object.freeze({
-  email: "",
+  email: "skrehagtech@gmail.com",
   phone: "",
   location: ""
 });

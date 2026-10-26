@@ -3,30 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Skrehag tech services — připravovaný web pro servis počítačů a IT techniky.">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#111817">
-  <title>Skrehag tech services — Servis počítačů a IT techniky</title>
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+  <meta name="description" content="Skrehag Tech Services — pomoc s počítači, péče o techniku a tvorba webových stránek. Filip Skřenek a Andreas Hagen. Napište nám a domluvíme se.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#003065">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="cs_CZ">
+  <meta property="og:title" content="Skrehag Tech Services — IT servis a tvorba webů">
+  <meta property="og:description" content="Vaše technika. Váš web. Naše starost. Pomoc s počítači a webové stránky s osobním přístupem.">
+  <meta property="og:url" content="https://skrehag.github.io/skrehag-tech-services/">
+  <meta property="og:image" content="https://skrehag.github.io/skrehag-tech-services/assets/logo-full.png">
+  <meta property="og:image:alt" content="Logo Skrehag Tech Services">
+  <title>Skrehag Tech Services — IT servis a tvorba webů</title>
+  <link rel="canonical" href="https://skrehag.github.io/skrehag-tech-services/">
+  <link rel="icon" type="image/png" href="./assets/logo-symbol.png">
+  <link rel="apple-touch-icon" href="./assets/logo-symbol.png">
   <link rel="stylesheet" href="./styles.css">
   <script src="./site-config.js" defer></script>
   <script src="./script.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"Skrehag Tech Services","url":"https://skrehag.github.io/skrehag-tech-services/","logo":"https://skrehag.github.io/skrehag-tech-services/assets/logo-full.png","email":"skrehagtech@gmail.com"}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Přejít na obsah</a>
-  <div class="preview-notice" id="preview-notice">PRVNÍ NÁVRH WEBU <span>•</span> Nabídku služeb a kontakty ještě upřesníme.</div>
   <header class="site-header">
     <div class="container nav-inner">
-      <a class="brand" href="#uvod" aria-label="Skrehag tech services — úvod">
-        <span class="brand-icon" aria-hidden="true">s<span>.</span></span>
-        <span class="brand-name">skrehag<span>tech services</span></span>
+      <a class="brand" href="#uvod" aria-label="Skrehag Tech Services — úvod">
+        <svg class="brand-logo" viewBox="125 145 1830 490" role="img" aria-label="Skrehag Tech Services"><image href="./assets/logo-full.png" width="2073" height="758"/></svg>
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span>Menu</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       <nav id="navigation" aria-label="Hlavní navigace">
-        <a href="#sluzby">Služby</a>
-        <a href="#postup">Jak to funguje</a>
-        <a href="#o-servisu">O servisu</a>
-        <a class="nav-contact" href="#kontakt">Kontakt <span aria-hidden="true">↗</span></a>
+        <a href="#sluzby">Co děláme</a><a href="#postup">Jak to probíhá</a><a href="#o-nas">O nás</a><a class="nav-contact" href="#kontakt">Napište nám <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -34,68 +41,77 @@
     <section class="hero" id="uvod" aria-labelledby="hero-heading">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="tiny-square"></span> SKREHAG TECH SERVICES</p>
-          <h1 id="hero-heading">Technika v kondici.<br><span>Klid na práci.</span></h1>
-          <p class="hero-description">Servis počítačů a IT techniky.<br>Pro práci, hraní i každodenní život.</p>
-          <div class="hero-actions"><a class="button button-lime" href="#sluzby">Prozkoumat služby <span aria-hidden="true">↗</span></a><a class="text-link" href="#kontakt">Spojit se se servisem <span aria-hidden="true">→</span></a></div>
-          <div class="hero-bottom"><span class="line"></span><p>Počítače. Notebooky. IT.</p><span class="mono">01 / SKREHAG</span></div>
+          <p class="eyebrow"><span class="brand-dot" aria-hidden="true"></span> IT technika &amp; tvorba webů</p>
+          <h1 id="hero-heading">Vaše technika.<br>Váš web.<br><span>Naše starost.</span></h1>
+          <p class="hero-description">Pomůžeme s počítačem i novými stránkami. Srozumitelně, osobně a s domluvou předem.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#kontakt">S čím vám pomůžeme? <span aria-hidden="true">↗</span></a><a class="text-link" href="#sluzby">Prohlédnout služby <span aria-hidden="true">↓</span></a></div>
+          <div class="hero-signature"><span class="signature-line" aria-hidden="true"></span><p>Filip Skřenek &amp; Andreas Hagen<br><span>Dva lidé, společný zájem o technologie.</span></p></div>
         </div>
-        <div class="hero-visual">
-          <div class="visual-heading"><span>TECHNOLOGIE POD KONTROLOU</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3H3v3m15-3h3v3M3 18v3h3m15-3v3h-3"/></svg></div>
-          <img src="./assets/hardware.svg" alt="Technická ilustrace počítačové desky a procesoru v rozloženém pohledu" width="680" height="620" fetchpriority="high">
-          <div class="visual-bottom"><span><span class="status-dot"></span> HARDWARE / SOFTWARE</span><span class="mono">ST—01</span></div>
+        <div class="hero-visual" aria-label="Značka Skrehag Tech Services">
+          <div class="logo-orbit orbit-one" aria-hidden="true"></div><div class="logo-orbit orbit-two" aria-hidden="true"></div>
+          <div class="hero-logo-card">
+            <div class="card-topline"><span>SKREHAG</span><span>TECH SERVICES</span></div>
+            <svg class="hero-symbol" viewBox="245 145 825 950" role="img" aria-label="Modrozelený symbol Skrehag"><image href="./assets/logo-symbol.png" width="1312" height="1199"/></svg>
+            <div class="card-bottomline"><span>Technika, která slouží.</span><span aria-hidden="true">↗</span></div>
+          </div>
+          <span class="floating-label label-hardware"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg> Hardware</span>
+          <span class="floating-label label-web"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/></svg> Web</span>
         </div>
       </div>
-      <div class="hero-strip"><div class="container"><span>HARDWARE</span><i aria-hidden="true">+</i><span>SOFTWARE</span><i aria-hidden="true">+</i><span>ÚDRŽBA</span><i aria-hidden="true">+</i><span>IT SERVIS</span></div></div>
     </section>
+    <div class="service-strip" aria-hidden="true"><div class="container strip-inner"><span>Počítače &amp; notebooky</span><b>+</b><span>Péče o techniku</span><b>+</b><span>Webové stránky</span></div></div>
 
-    <section class="services section-light" id="sluzby" aria-labelledby="services-heading">
+    <section class="section services" id="sluzby" aria-labelledby="services-heading">
       <div class="container">
-        <div class="section-top"><p class="eyebrow">01 / SLUŽBY</p><span class="section-note draft-only">Návrh nabídky — finální rozsah doplníme</span></div>
-        <div class="section-intro"><h2 id="services-heading">Každý problém má<br><em>své řešení.</em></h2><p>Od běžné údržby po změnu výkonu.<br>Vyberte oblast, kterou potřebujete řešit.</p></div>
+        <div class="section-heading"><div><p class="eyebrow">01 / Co děláme</p><h2 id="services-heading">Od počítače<br>až po váš web.</h2></div><p>Technika má usnadňovat život.<br>Pomůžeme vám, aby to tak bylo.</p></div>
         <div class="service-grid">
           <article class="service-card">
-            <div class="service-card-top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="5" y="8" width="38" height="26" rx="3"/><path d="M17 42h14M24 34v8M12 17h7l4 8 5-13 4 10h5"/></svg><span class="mono">01</span></div>
-            <h3>Diagnostika <br>a opravy</h3><p>Nefunkční počítač, zpomalování nebo nečekané pády? Prvním krokem je zjistit příčinu.</p>
-            <details><summary>Co sem patří <span aria-hidden="true">+</span></summary><div class="service-detail">Návrh rozsahu: hledání závad počítačů a notebooků, kontrola komponent a posouzení možností opravy. Přesnou nabídku ještě potvrdíme.</div></details>
+            <div class="service-card-top"><span class="service-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="5" width="24" height="17" rx="2"/><path d="M11 28h10M16 22v6m-6-15 3 3 7-7"/></svg></span><span class="card-number">01</span></div>
+            <p class="service-category">IT servis</p><h3>Počítače<br> a notebooky</h3>
+            <p>Počítač se zpomaluje, zlobí nebo potřebuje nastavit? Popište nám problém a společně najdeme další postup.</p>
+            <details><summary>S čím se na nás obrátit <span aria-hidden="true">+</span></summary><ul><li>Diagnostika potíží s počítačem</li><li>Nastavení systému a programů</li><li>Pomoc s výběrem vhodného řešení</li></ul></details>
           </article>
           <article class="service-card">
-            <div class="service-card-top"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 7v34M7 24h34M12 12l24 24M12 36l24-24"/><circle cx="24" cy="24" r="7"/><path d="m24 7-4 5m4-5 4 5m13 12-5-4m5 4-5 4M24 41l4-5m-4 5-4-5M7 24l5 4m-5-4 5-4"/></svg><span class="mono">02</span></div>
-            <h3>Čištění <br>a údržba</h3><p>Hlučné ventilátory a vysoké teploty si zaslouží pozornost. Pravidelná péče pomáhá technice.</p>
-            <details><summary>Co sem patří <span aria-hidden="true">+</span></summary><div class="service-detail">Návrh rozsahu: odstranění prachu, kontrola chlazení a výměna teplovodivé pasty podle stavu zařízení. Přesnou nabídku ještě potvrdíme.</div></details>
+            <div class="service-card-top"><span class="service-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m22 4-5 5 6 6 5-5a9 9 0 0 1-11 11L9 29l-6-6 8-8A9 9 0 0 1 22 4Z"/><path d="m7 23 2 2"/></svg></span><span class="card-number">02</span></div>
+            <p class="service-category">Údržba &amp; vylepšení</p><h3>Aby technika<br> sloužila dál</h3>
+            <p>I stávající počítač může fungovat lépe. Probereme čištění, údržbu nebo možnosti vylepšení podle vašeho zařízení.</p>
+            <details><summary>Co můžeme probrat <span aria-hidden="true">+</span></summary><ul><li>Čištění a péče o počítač</li><li>Možnosti rozšíření paměti či úložiště</li><li>Výběr komponent podle potřeb</li></ul></details>
           </article>
-          <article class="service-card">
-            <div class="service-card-top"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="12" y="12" width="24" height="24" rx="3"/><path d="M19 4v8m10-8v8M19 36v8m10-8v8M4 19h8m-8 10h8m24-10h8m-8 10h8M19 26l5-5 5 5m-5-5v10"/></svg><span class="mono">03</span></div>
-            <h3>Upgrade <br>a nastavení</h3><p>Více prostoru, svižnější start nebo nové využití. Někdy stačí správně zvolená změna.</p>
-            <details><summary>Co sem patří <span aria-hidden="true">+</span></summary><div class="service-detail">Návrh rozsahu: rozšíření paměti, výměna úložiště a nastavení systému. Konkrétní možnosti závisí na zařízení. Přesnou nabídku ještě potvrdíme.</div></details>
+          <article class="service-card service-card-web">
+            <div class="service-card-top"><span class="service-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="22" rx="2"/><path d="M3 12h26M7 9h1m3 0h1m0 7-4 4 4 4m8-8 4 4-4 4"/></svg></span><span class="card-number">03</span></div>
+            <p class="service-category">Tvorba webů</p><h3>Stránky, které<br> vás představí</h3>
+            <p>Přehledný web pro váš projekt, službu nebo podnikání. Od prvního návrhu po stránky, které otevřete i na mobilu.</p>
+            <details><summary>Od nápadu ke stránkám <span aria-hidden="true">+</span></summary><ul><li>Návrh vzhledu a struktury</li><li>Zobrazení na mobilu i počítači</li><li>Domluva na zveřejnění a úpravách</li></ul></details>
           </article>
         </div>
-        <div class="service-caption"><span class="small-cross" aria-hidden="true">+</span><p>Nevíte, do které kategorie váš problém patří? Začněte popisem toho, co zařízení dělá.</p><a href="#kontakt">Přejít na kontakt <span aria-hidden="true">↗</span></a></div>
+        <p class="section-note">Každé zařízení i projekt jsou jiné. Konkrétní možnosti, rozsah a cenu si vždy domluvíme předem.</p>
       </div>
     </section>
 
-    <section class="process" id="postup" aria-labelledby="process-heading">
-      <div class="container process-layout">
-        <div><p class="eyebrow">02 / JAK TO FUNGUJE</p><h2 id="process-heading">Od problému<br><span>k dalšímu kroku.</span></h2><p class="process-note">Dobře popsaný problém je dobrý začátek. Připravte si pár informací o svém zařízení.</p></div>
-        <ol class="process-list">
-          <li><span class="step">01</span><div><h3>Co potřebujete vyřešit?</h3><p>Popište závadu a kdy se objevuje. Přidejte typ a model zařízení, pokud je znáte.</p></div><span class="step-arrow" aria-hidden="true">↗</span></li>
-          <li><span class="step">02</span><div><h3>Co už jste zkusili?</h3><p>Pomůže vědět, zda potíže začaly po aktualizaci, pádu nebo jiné změně.</p></div><span class="step-arrow" aria-hidden="true">↗</span></li>
-          <li><span class="step">03</span><div><h3>Domluvíme podrobnosti.</h3><p class="draft-only">Způsob předání, průběh servisu a cenové podmínky doplníme před spuštěním webu.</p></div><span class="step-arrow" aria-hidden="true">↗</span></li>
+    <section class="process section" id="postup" aria-labelledby="process-heading">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">02 / Jak to probíhá</p><h2 id="process-heading">Nejdřív se domluvíme.<br>Potom se pustíme do práce.</h2></div></div>
+        <ol class="process-grid">
+          <li><span class="step-number">01</span><h3>Napište nám</h3><p>Stačí krátce popsat, co s technikou řešíte nebo jaký web si představujete.</p></li>
+          <li><span class="step-number">02</span><h3>Domluvíme rozsah i cenu</h3><p>Upřesníme si požadavky, možnosti a postup. Budete vědět, na čem jsme se dohodli.</p></li>
+          <li><span class="step-number">03</span><h3>Pustíme se do práce</h3><p>Průběh spolu projdeme a výsledek vám předáme se srozumitelným vysvětlením.</p></li>
         </ol>
       </div>
     </section>
 
-    <section class="about section-light" id="o-servisu" aria-labelledby="about-heading">
+    <section class="section about" id="o-nas" aria-labelledby="about-heading">
       <div class="container about-grid">
-        <div class="about-art" aria-hidden="true"><div class="outline-square square-one"></div><div class="outline-square square-two"></div><div class="about-mark">s<span>.</span></div><span class="about-art-label mono">SKREHAG / TECH SERVICES</span><span class="about-art-cross">+</span></div>
-        <div class="about-copy"><p class="eyebrow">03 / O SERVISU</p><h2 id="about-heading">Za technikou<br>stojí <em>člověk.</em></h2><p>Skrehag tech services je připravovaná prezentace servisu počítačů a IT techniky.</p><p class="muted">Právě chystáme podrobnosti o službách, místě působení a možnostech spolupráce. Brzy tu najdete také představení člověka za servisem.</p><a class="text-link dark-link" href="#kontakt">Kontaktní informace <span aria-hidden="true">↗</span></a></div>
+        <div class="about-brand"><svg viewBox="245 145 825 950" role="img" aria-label="Symbol Skrehag Tech Services"><image href="./assets/logo-symbol.png" width="1312" height="1199"/></svg><span>SKŘENEK + HAGEN = SKREHAG</span></div>
+        <div class="about-copy"><p class="eyebrow">03 / Kdo jsme</p><h2 id="about-heading">Dva lidé.<br>Osobní přístup.</h2><p class="about-lead">Jsme Filip Skřenek a Andreas Hagen. Spojuje nás zájem o techniku a chuť vytvářet věci, které mají využití.</p><p>Začínáme s vlastními projekty a budujeme Skrehag Tech Services. Chceme jednat přímo, vysvětlovat srozumitelně a vždy si nejdřív říct, s čím vám dokážeme pomoci.</p><a class="text-link" href="#kontakt">Pojďme probrat váš nápad <span aria-hidden="true">↗</span></a></div>
       </div>
     </section>
 
-    <section class="contact" id="kontakt" aria-labelledby="contact-heading">
-      <div class="container"><div class="contact-heading"><p class="eyebrow">04 / KONTAKT</p><span class="contact-symbol" aria-hidden="true">↗</span></div><h2 id="contact-heading">Pojďme dát techniku<br><span>do pořádku.</span></h2><div class="contact-content"><p id="contact-intro">Kontakty a místo působení právě připravujeme.<br>Jakmile budou doplněné, spojíte se se servisem přímo odsud.</p><div class="contact-placeholder" id="contact-placeholder"><span class="status-dot"></span> KONTAKTY BRZY DOPLNÍME</div><div class="contact-links" id="contact-links" hidden></div></div></div>
+    <section class="contact-section" id="kontakt" aria-labelledby="contact-heading">
+      <div class="container contact-panel">
+        <div class="contact-copy"><p class="eyebrow">04 / Kontakt</p><h2 id="contact-heading">Co pro vás<br>můžeme udělat?</h2><p>Popište nám svůj problém nebo nápad.<br>Ozveme se a domluvíme další kroky.</p></div>
+        <div class="contact-action"><span class="contact-label">Napište nám na e-mail</span><a class="email-link" href="mailto:skrehagtech@gmail.com"><span>skrehagtech@gmail.com</span><span aria-hidden="true">↗</span></a><div class="contact-buttons"><a class="button button-primary" href="mailto:skrehagtech@gmail.com">Napsat e-mail <span aria-hidden="true">↗</span></a><button class="copy-email" id="copy-email" type="button" hidden>Kopírovat adresu</button></div><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p><p class="contact-hint">Pomůže nám typ zařízení, popis potíží nebo stručná představa o webu.</p></div>
+      </div>
     </section>
   </main>
-  <footer><div class="container footer-inner"><a class="footer-brand" href="#uvod">skrehag<span>tech services</span></a><p>© <span id="year">2026</span> Skrehag tech services</p><a href="#uvod" class="back-top">Zpět nahoru <span aria-hidden="true">↑</span></a></div></footer>
+  <footer class="site-footer"><div class="container footer-inner"><a class="brand footer-brand" href="#uvod" aria-label="Skrehag Tech Services — zpět nahoru"><svg class="brand-logo" viewBox="125 145 1830 490" role="img" aria-label="Skrehag Tech Services"><image href="./assets/logo-full.png" width="2073" height="758"/></svg></a><p>IT technika &amp; tvorba webů</p><p>© <span id="year">2026</span> Skrehag Tech Services</p></div></footer>
 </body>
 </html>

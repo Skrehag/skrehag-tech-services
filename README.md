@@ -1,53 +1,39 @@
-# Skrehag tech services
+# Skrehag Tech Services
 
-První vizuální návrh webu v češtině. Čisté HTML, CSS a JavaScript, bez externích knihoven, bez sledování a bez placených služeb. Grafika je vlastní SVG. Zobrazení se přizpůsobuje mobilům i počítačům.
+Prezentační web v češtině, sladěný s dodaným modrozeleným logem. Čisté HTML, CSS a JavaScript bez externích knihoven, sledování, formulářů a plateb.
 
-## Stav obsahu
+Veřejný web: https://skrehag.github.io/skrehag-tech-services/
 
-**Jde o pracovní návrh.** Název a zaměření na IT servis jsou potvrzené. Konkrétní služby, město, kontakty, ceník, provozovatel, způsob předání a logo ještě nejsou dodané. Návrh neobsahuje smyšlené kontakty, reference ani ceny. Tři kategorie služeb jsou výslovně označené jako návrh.
+Kontakt: **skrehagtech@gmail.com**. Telefon a oblast působení nejsou zveřejněné. Ceny a konkrétní rozsah se domlouvají individuálně.
 
-Stránka má `noindex, nofollow` a viditelné označení návrhu. Před ostrým spuštěním potvrďte a doplňte obsah, odstraňte označení návrhu a upravte kontrolu metadat v `tools/check.mjs`. `noindex` není ochrana přístupu: zveřejněný web a veřejný repozitář jsou dostupné návštěvníkům.
+## Lokální náhled
 
-## Spuštění a úpravy
+Stačí Node.js 22 nebo novější, bez instalace npm balíčků.
 
-Stačí Node.js 22 nebo novější. Není nutné nic instalovat pomocí npm.
-
-```sh
+~~~sh
 node tools/serve.mjs
-```
+~~~
 
-Náhled se otevře na http://127.0.0.1:4173. Samotný web funguje i otevřením `index.html` v prohlížeči.
+Náhled je na http://127.0.0.1:4173. Server zpřístupňuje pouze veřejné soubory.
 
-- `index.html`: obsah a struktura stránky.
-- `styles.css`: barvy, rozložení a mobilní verze.
-- `site-config.js`: veřejný e-mail, telefon a místo působení. Po doplnění se zobrazí skutečné odkazy pro volání/e-mail.
-- `script.js`: mobilní menu a zobrazení kontaktů.
-- `assets/`: vlastní ilustrace a dočasná ikona. Značku později nahradíme dodaným logem.
+## Úpravy
 
-Web zatím neodesílá žádný formulář a nesbírá zákaznická data. Kontaktní odkazy vzniknou až po zadání platných údajů.
+- index.html: obsah, e-mailové odkazy a metadata pro vyhledávání.
+- styles.css: modrozelené barvy, rozložení a mobilní navigace.
+- site-config.js: veřejný e-mail pro tlačítko kopírování. Při změně upravte také index.html.
+- script.js: mobilní menu, aktuální rok a kopírování e-mailu.
+- assets/logo-full.png a assets/logo-symbol.png: originální dodaná loga, beze změn. SVG výřezy v HTML pouze omezují průhledné okraje při zobrazení.
+- sitemap.xml a robots.txt: podklady pro vyhledávače. Zařazení do výsledků vyhledávání závisí na vyhledávači.
 
-## Kontrola a sestavení
+## Kontrola a nasazení
 
-```sh
+~~~sh
 node tools/check.mjs
 node tools/build.mjs
-```
+~~~
 
-Ve složce `dist/` jsou pouze veřejné soubory pro hosting. Kontrola hlídá odkazy na sekce, přítomnost souborů, metadata, duplicitní identifikátory a syntaxi JavaScriptu.
+Ve složce dist/ vzniknou veřejné soubory pro hosting. Workflow .github/workflows/pages.yml po každém pushi do main ověří a nasadí web na GitHub Pages. Pull requesty pouze zkontroluje.
 
-## GitHub
+Krátká adresa https://skrehag.github.io/ je spravovaná v samostatném repozitáři Skrehag.github.io a přesměruje na tento web. Obsah webu se upravuje pouze zde.
 
-Připravený workflow `.github/workflows/pages.yml` ověří web po každém pushi do `main` a nasadí jej na GitHub Pages, pokud jsou Pages zapnuté. Pull requesty pouze zkontroluje.
-
-1. Vytvořit repozitář `skrehag-tech-services` a nahrát tento adresář včetně složky `.github`.
-2. V Settings → Pages zvolit Source → GitHub Actions.
-3. Spustit workflow nebo poslat změnu do větve `main`.
-4. Ověřit URL vrácenou úspěšným nasazením. Standardně má podobu `https://UZIVATEL.github.io/skrehag-tech-services/`.
-
-Vlastní doména není potřeba. GitHub Free nabízí Pages z veřejných repozitářů.
-
-### Rozsah hostingu
-
-GitHub omezuje použití Pages pro provoz online podnikání, e-commerce a weby zaměřené především na obchodní transakce. Před použitím jako ostrého obchodního webu je třeba posoudit finální obsah podle [pravidel GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits). Tento návrh nemá objednávky ani platby. Kód může zůstat na GitHubu i při provozu webu na jiném hostingu, například Cloudflare.
-
-Do repozitáře nikdy nenahrávejte hesla, přístupové tokeny ani zákaznické údaje.
+Do veřejného repozitáře nepatří hesla, tokeny ani zákaznické údaje.

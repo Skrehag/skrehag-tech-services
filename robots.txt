@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://skrehag.github.io/skrehag-tech-services/sitemap.xml
